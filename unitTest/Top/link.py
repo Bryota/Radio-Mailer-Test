@@ -3,31 +3,21 @@ import chromedriver_binary
 from termcolor import colored
 from selenium import webdriver
 
+from unitTest.Base import Base
 
-class Link(object):
-    def __init__(self, driver='', current_url=''):
-        self.driver = webdriver.Chrome()
-        self.driver.get('https://radiomailapp.web.app/login')
-        self.current_url = self.driver.current_url
-        self.login()
 
-    def login(self):
-        self.driver.find_element_by_id('email').send_keys('test13@test.com')
-        self.driver.find_element_by_id('password').send_keys('password123')
-        self.driver.find_element_by_css_selector('.login_btn').click()
-        time.sleep(5)
-
-    def get_current_url(self):
-        self.current_url = self.driver.current_url
+class Link(Base):
+    def __init__(self):
+        super().__init__()
 
     def check_page(self, link_text, slug):
         self.driver.find_element_by_link_text(link_text).click()
-        self.get_current_url()
+        super().get_current_url()
         if (self.current_url == 'https://radiomailapp.web.app/{}'.format(slug)):
-            print('{}ページのテストに成功しました'.format(slug))
+            print(colored('{}ページのテストに成功しました'.format(slug), 'green'))
             self.driver.back()
         else:
-            print('{}ページのテストに失敗しました'.format(slug))
+            print(colored('{}ページのテストに失敗しました'.format(slug), 'red'))
             print(self.current_url)
             exit()
 
