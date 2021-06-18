@@ -1,7 +1,4 @@
-import time
-import chromedriver_binary
 from termcolor import colored
-from selenium import webdriver
 
 from unitTest.Base import Base
 
