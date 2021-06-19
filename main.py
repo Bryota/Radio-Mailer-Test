@@ -5,6 +5,7 @@ from unitTest.Top import link
 from unitTest.SendMail import sendmail
 from unitTest.Form import form
 from unitTest.SavedMail import savedmail
+from unitTest.List import list
 
 def main():
     # ログイン画面
@@ -27,8 +28,12 @@ def main():
     # formTest.check_validation()
 
     # 未送信のメールページ
-    savedMailTest = savedmail.SavedMail()
-    savedMailTest.check_single_page()
+    # savedMailTest = savedmail.SavedMail()
+    # savedMailTest.check_single_page()
+
+    # 過去の投稿ページ
+    listTest = list.List()
+    listTest.check_single_page()
 
 
 if __name__ == '__main__':
