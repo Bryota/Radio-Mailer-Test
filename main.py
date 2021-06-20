@@ -8,6 +8,7 @@ from unitTest.SavedMail import savedmail
 from unitTest.List import list
 from unitTest.Setting import setting
 from unitTest.UserInfo import userInfo
+from unitTest.Password import password
 
 def main():
     # ログイン画面
@@ -43,8 +44,13 @@ def main():
     # settingTest.check_logout()
 
     # ユーザー情報ページ
-    userInfoTest = userInfo.UserInfo()
-    userInfoTest.check_form_navigation()
+    # userInfoTest = userInfo.UserInfo()
+    # userInfoTest.check_form_navigation()
+
+    # パスワード変更ページ
+    passwordTest = password.Password()
+    # passwordTest.check_form_navigation()
+    passwordTest.check_validation()
 
 if __name__ == '__main__':
     main()
