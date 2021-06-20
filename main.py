@@ -7,6 +7,7 @@ from unitTest.Form import form
 from unitTest.SavedMail import savedmail
 from unitTest.List import list
 from unitTest.Setting import setting
+from unitTest.UserInfo import userInfo
 
 def main():
     # ログイン画面
@@ -37,10 +38,13 @@ def main():
     # listTest.check_single_page()
 
     # 設定ページ
-    settingTest = setting.Setting()
-    settingTest.check_links()
+    # settingTest = setting.Setting()
+    # settingTest.check_links()
     # settingTest.check_logout()
 
+    # ユーザー情報ページ
+    userInfoTest = userInfo.UserInfo()
+    userInfoTest.check_form_navigation()
 
 if __name__ == '__main__':
     main()
