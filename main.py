@@ -10,6 +10,7 @@ from unitTest.Setting import setting
 from unitTest.UserInfo import userInfo
 from unitTest.Password import password
 from unitTest.Template import template
+from unitTest.MyProgram import myProgram
 
 def main():
     # ログイン画面
@@ -54,9 +55,12 @@ def main():
     # passwordTest.check_validation()
 
     # テンプレートページ
-    templateTest = template.Template()
-    templateTest.check_validation()
+    # templateTest = template.Template()
+    # templateTest.check_validation()
 
+    # マイ番組ページ
+    myProgramTest = myProgram.MyProgram()
+    myProgramTest.check_validation()
 
 if __name__ == '__main__':
     main()
