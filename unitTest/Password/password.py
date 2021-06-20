@@ -4,7 +4,6 @@ from termcolor import colored
 
 from unitTest.Base import Base
 
-
 class Password(Base):
     def __init__(self):
         super().__init__()
@@ -63,8 +62,3 @@ class Password(Base):
             print(colored('新しいパスワードのバリデーションが正しく機能していません（不当なパスワード）', 'red'))
             exit()
         print(colored('バリデーションのテストが完了しました', 'green'))
-
-
-
-
-

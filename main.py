@@ -9,6 +9,7 @@ from unitTest.List import list
 from unitTest.Setting import setting
 from unitTest.UserInfo import userInfo
 from unitTest.Password import password
+from unitTest.Template import template
 
 def main():
     # ログイン画面
@@ -48,9 +49,14 @@ def main():
     # userInfoTest.check_form_navigation()
 
     # パスワード変更ページ
-    passwordTest = password.Password()
+    # passwordTest = password.Password()
     # passwordTest.check_form_navigation()
-    passwordTest.check_validation()
+    # passwordTest.check_validation()
+
+    # テンプレートページ
+    templateTest = template.Template()
+    templateTest.check_validation()
+
 
 if __name__ == '__main__':
     main()
