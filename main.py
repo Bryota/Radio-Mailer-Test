@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-from unitTest.Login import loginTest
+from unitTest.Login import login
 from unitTest.Top import link
 from unitTest.SendMail import sendmail
 from unitTest.Form import form
@@ -14,8 +14,10 @@ from unitTest.MyProgram import myProgram
 
 def main():
     # ログイン画面
-    # login = loginTest.LoginTest()
-    # login.check_login_url()
+    loginTest = login.Login()
+    # loginTest.check_login()
+    # loginTest.check_validation()
+    loginTest.check_link()
 
     # トップ画面
     # Top = link.Link()
@@ -59,8 +61,9 @@ def main():
     # templateTest.check_validation()
 
     # マイ番組ページ
-    myProgramTest = myProgram.MyProgram()
-    myProgramTest.check_validation()
+    # myProgramTest = myProgram.MyProgram()
+    # myProgramTest.check_validation()
+
 
 if __name__ == '__main__':
     main()
