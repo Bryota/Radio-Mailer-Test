@@ -11,13 +11,20 @@ from unitTest.UserInfo import userInfo
 from unitTest.Password import password
 from unitTest.Template import template
 from unitTest.MyProgram import myProgram
+from unitTest.Register import register
 
 def main():
     # ログイン画面
-    loginTest = login.Login()
+    # loginTest = login.Login()
     # loginTest.check_login()
     # loginTest.check_validation()
-    loginTest.check_link()
+    # loginTest.check_link()
+
+    # 登録画面
+    RegisterTest = register.Register()
+    # RegisterTest.check_form_navigation()
+    # RegisterTest.check_register()
+    RegisterTest.check_link()
 
     # トップ画面
     # Top = link.Link()
