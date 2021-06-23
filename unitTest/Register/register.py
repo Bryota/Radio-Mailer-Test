@@ -48,16 +48,27 @@ class Register(Base):
         self.driver.find_element_by_css_selector('.back_btn').click()
         self.driver.find_element_by_css_selector('.back_btn').click()
         self.driver.find_element_by_css_selector('#email').send_keys('test13@test.com')
+        self.driver.find_element_by_css_selector('#password').send_keys('test')
         self.driver.find_element_by_css_selector('.next_btn').click()
         self.driver.find_element_by_css_selector('.next_btn').click()
         self.driver.find_element_by_css_selector('.submit_btn').click()
         time.sleep(3)
         error_text = self.driver.find_element_by_css_selector('.error').text
         if (error_text != 'パスワードは6文字以上設定してください'):
-            print(colored('登録済のメールアドレスのバリデーションが正しく動いていません', 'red'))
+            print(colored('パスワードのバリデーションが正しく動いていません', 'red'))
             exit()
         self.driver.refresh()
-        self.driver.find_element_by_css_selector('#email').send_keys('testtest@test.com')
+        self.driver.find_element_by_css_selector('#email').send_keys('test13@test.com')
+        self.driver.find_element_by_css_selector('#password').send_keys('testpassword')
+        self.driver.find_element_by_css_selector('.next_btn').click()
+        self.driver.find_element_by_css_selector('.next_btn').click()
+        self.driver.find_element_by_css_selector('.submit_btn').click()
+        time.sleep(3)
+        error_text = self.driver.find_element_by_css_selector('.error').text
+        if (error_text != 'メールアドレスが既に使われています'):
+            print(colored('登録済のメールアドレスのバリデーションが正しく動いていません', 'red'))
+            exit()
+        print(colored('登録テストが完了しました', 'green'))
 
     def check_link(self):
         self.driver.find_element_by_link_text('Sign In').click()

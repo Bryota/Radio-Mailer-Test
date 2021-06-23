@@ -23,8 +23,8 @@ def main():
     # 登録画面
     RegisterTest = register.Register()
     # RegisterTest.check_form_navigation()
-    # RegisterTest.check_register()
-    RegisterTest.check_link()
+    RegisterTest.check_register()
+    # RegisterTest.check_link()
 
     # トップ画面
     # Top = link.Link()
